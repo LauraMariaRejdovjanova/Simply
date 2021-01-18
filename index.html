@@ -1,34 +1,99 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" type="image/jpg" href="icons/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="icons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="icons/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="icons/mstile-310x310.png" />
 
-<head>
-<meta http-equiv=Content-Type content="text/html">
-<meta charset="utf-8">
-<style>
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-p {
-  font-size: 25px;
- text-align:center
-}
-a{
-  color: white;
-}
-</style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+  </head>
+  <body>
 
 
-</head>
+    <div id="MainText" class="noSelect"><h1 style="padding: 1vh;padding-left: 1.5vh;margin:0">Vitajte na stránke</h1></div>
+    <ul id="Menu">
+      <li style="margin-top:2vh" class="noSelect"><label id="StartLabel" for="StartButton" class="SelectedPointer"><b>Úvod</b></label></li>
 
-<body bgcolor="#24292E">
+      <li><label class="UnSelectedpointer noSelect"><b><i class="fa fa-caret-down"></i> Informácie</b></label>
+        <ul id="dropdown-content">
+          <li><label id="InfoLabel" for="InfoButton" class="UnSelectedpointer" style="font-size:2vh"><b>Základné Informácie</b></label></li>
+          <li><label id="InterestsLabel" for="InterestsButton" class="UnSelectedpointer" style="font-size:2vh"><b>Záľuby</b></label></li>
+        </ul>
+      </li>
+
+    </ul>
 
 
- <a href="02.html"><p>Vitajte na mojej stránke </p></a>
- <img class="center" width=326 height=158
- src="image001.png">
+    <div style="display:block" class="content" id="Start">
+      <h2 class="noSelect">Vitajte na stránke</h2>
+      <li class="default"><label for="InfoButton" class="a" id="pointer"><u>Použite panel po ľavici alebo kliknite na tento text a obrázok</u></label></li>
+      <li style="list-style-type: none; margin-left: 2.5vh;" class="default"><label for="InfoButton" class="a" id="pointer"><u>pre viac informácií</u></label></li>
+      <li style="list-style-type: none;" class="default"><label for="InfoButton" class="a" id="pointer"><img src="image001.png" alt="[Obrázok šípky]"></label></li>
 
-</body>
+    </div>
 
+
+    <button onclick="toggleContent('Info')" id="InfoButton" style="display:none"></button>
+    <button onclick="toggleContent('Interests')" id="InterestsButton" style="display:none"></button>
+    <button onclick="toggleContent('Start')" id="StartButton" style="display:none"></button>
+
+
+
+
+    <div class="content" id="Info">
+      <h2 class="noSelect">Základné Informácie</h2>
+      <li class="default"><label class="a">Moje meno je Milan Kočík</label></li>
+      <li class="default"><label class="a">Moje telefónne číslo je: 0917 121 005</label></li>
+      <li class="default"><label class="a">Študujem na Univerzite v Košiciach,</label></li>
+      <li class="default"><label for="InterestsButton" class="a" id="pointer"><u>Záľuby</u></label></li>
+    </div>
+    <div class="content" id="Interests">
+      <h2 class="noSelect">Záľuby</h2>
+        <li class="default"><label class="a"><img style="padding-right: 1vh;width:5vh; position:relative; top:2vh" src="ComputerIcon.png">Programovanie</label> </li>
+        <li class="default"><label class="a"><img style="padding-right: 1vh;width:5vh; position:relative; top:2vh" src="music.png">Hudba</label> </li>
+
+    </div>
+
+
+    <script>
+      function toggleContent(id) {
+        const AllNames=["Info","Interests","Start"]
+        AllNames.forEach(iterate);
+        function iterate(name){
+          document.getElementById(name+"Label").setAttribute('class', 'UnSelectedpointer')
+          document.getElementById(name).style.display="none"
+        }
+        document.getElementById(id+"Label").setAttribute('class', 'SelectedPointer')
+        document.getElementById(id).style.display = "block";
+        if (id=="Interests" || id=="Info") {
+          document.getElementById("dropdown-content").style.display="block";
+        }
+        else {
+          document.getElementById("dropdown-content").style.display="";
+        }
+      }
+    </script>
+  </body>
 </html>
