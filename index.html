@@ -32,14 +32,14 @@
   <body>
 
 
-    <div id="MainText" class="noSelect"><h1 style="padding: 1vh;padding-left: 1.5vh;margin:0">Vitajte na stránke</h1></div>
+    <div id="MainText" class="noSelect"><h1 style="padding: 1vh;padding-left: 1.5vh;margin:0">Trieda 1.A</h1></div>
     <ul id="Menu">
       <li style="margin-top:2vh" class="noSelect"><label id="StartLabel" for="StartButton" class="SelectedPointer"><b>Úvod</b></label></li>
 
       <li><label class="UnSelectedpointer noSelect"><b><i class="fa fa-caret-down"></i> Informácie</b></label>
         <ul id="dropdown-content">
-          <li><label id="InfoLabel" for="InfoButton" class="UnSelectedpointer" style="font-size:2vh"><b>Základné Informácie</b></label></li>
-          <li><label id="InterestsLabel" for="InterestsButton" class="UnSelectedpointer" style="font-size:2vh"><b>Záľuby</b></label></li>
+          <li><label id="InfoLabel" for="InfoButton" class="UnSelectedpointer" style="font-size:2vh"><b>Zoznam žiakov</b></label></li>
+          <li><label id="InterestsLabel" for="InterestsButton" class="UnSelectedpointer" style="font-size:2vh"><b>Informácie</b></label></li>
         </ul>
       </li>
 
@@ -47,10 +47,10 @@
 
 
     <div style="display:block" class="content" id="Start">
-      <h2 class="noSelect">Vitajte na stránke</h2>
-      <li class="default"><label for="InfoButton" class="a" id="pointer"><u>Použite panel po ľavici alebo kliknite na tento text a obrázok</u></label></li>
-      <li style="list-style-type: none; margin-left: 2.5vh;" class="default"><label for="InfoButton" class="a" id="pointer"><u>pre viac informácií</u></label></li>
-      <li style="list-style-type: none;" class="default"><label for="InfoButton" class="a" id="pointer"><img style="margin-left: 5vh;width:40vh;"src="image001.png" alt="[Obrázok šípky]"></label></li>
+      <h2 class="noSelect">Vitajte na stránke triedy 1.A, kliknite tu alebo na panel po ľavici pre navigáciu</h2>
+      <li style="list-style-type: none; margin-left: 2.5vh;" class="default"><label for="InfoButton" class="a" id="pointer"><u>Zoznam žiakov</u></label></li>
+            <li style="list-style-type: none; margin-left: 2.5vh;" class="default"><label for="InterestsButton" class="a" id="pointer"><u>Informácie o triede</u></label></li>
+      <li style="list-style-type: none;" class="default"><label class="a"><img style="margin-left: 5vh;width:40vh;"src="image001.png" alt="[Obrázok šípky]"></label></li>
 
     </div>
 
@@ -63,17 +63,36 @@
 
 
     <div class="content" id="Info">
-      <h2 class="noSelect">Základné Informácie</h2>
-      <li class="default"><label class="a">Moje meno je Milan Kočík</label></li>
-      <li class="default"><label class="a">Moje telefónne číslo je: 0917 121 005</label></li>
-      <li class="default"><label class="a">Študujem na Univerzite v Košiciach,</label></li>
-      <li class="default"><label for="InterestsButton" class="a" id="pointer"><u>Záľuby</u></label></li>
+      <h2 class="noSelect">Zoznam žiakov</h2>
+
+      <li class="default"><label class="a">Zoznam žiakov</label>
+        <ul style="background-color:#202020; height: 55vh;width:30vh">
+          <li class="default" style="padding-top:2.5vh">1. Daniel Blahovský</li>
+          <li class="default">2. Vladimír Body</li>
+          <li class="default">3. Boris Brettschneider</li>
+          <li class="default">4. Samuel Brutovský</li>
+          <li class="default">5. Leonóra Dravecká</li>
+          <li class="default">6. Martin Falatko</li>
+          <li class="default">7. Juraj Fedor</li>
+          <li class="default">8. Matúš Hudák</li>
+          <li class="default">9. Kristína Hudáková</li>
+          <li class="default">10. Lukáš Jenčík</li>
+          <li class="default">11. Gabriela Emma Kolesárová</li>
+          <li class="default">12. Nina Konečná</li>
+          <li class="default">13. Michal Macko</li>
+          <li class="default">14. Sára Pšenková</li>
+          <li class="default">15.	Laura Mária Rejdovjanová</li>
+          <li class="default">17. Dominik Schmidt</li>
+          <li class="default">18. Dávid Starinský</li>
+          <li class="default">19. Tomáš Varga</li>
+          <li class="default">20. Simona Vojtková</li>
+        </ul>
+      </li>
     </div>
     <div class="content" id="Interests">
-      <h2 class="noSelect">Záľuby</h2>
-        <li class="default"><label class="a"><img style="padding-right: 1vh;width:5vh; position:relative; top:2vh" src="ComputerIcon.png">Programovanie</label> </li>
-        <li class="default"><label class="a"><img style="padding-right: 1vh;width:5vh; position:relative; top:2vh" src="music.png">Hudba</label> </li>
-
+      <h2 class="noSelect">Informácie</h2>
+        <li  style="width: 50vh" class="default"><label class="a"> Naša trieda je kolektív ktorý začal na tejto škole už pred 5 rokmi, aj keď sa k nám pridali nový žiaci po štyroch rokoch ich zaradenie do kolektívu bolo skoro okamžité, a doteraz sú ako keby tam s nami boli od začiatku</label></li>
+        <li class="default"><label class="a"> V sekunde sme mali lektorku z anglicka ktorá nám pomáhala zlepšiť, fotky môžte nájsť <a href="https://gymgl.edupage.org/album/#gallery/55"> tu </a></label></li>
     </div>
 
 
